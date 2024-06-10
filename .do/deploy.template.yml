@@ -1,0 +1,10 @@
+---
+spec:
+  name: GoodwillHacking
+  static_sites:
+    - build_command: hugo --destination ./public
+      environment_slug: hugo
+      git:
+        branch: main
+        repo: https://github.com/goodwillhacking/website.git
+      name: GoodwillHacking
