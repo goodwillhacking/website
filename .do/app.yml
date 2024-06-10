@@ -1,9 +1,0 @@
----
-name: goodwillhacking
-static_sites:
-  - environment_slug: html
-    github:
-      branch: main
-      deploy_on_push: true
-      repo: goodwillhacking/website
-    name: goodwillhacking
