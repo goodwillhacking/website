@@ -64,7 +64,7 @@ theme = "FeelIt"
   [params.social]
     GitHub = "xxxx"
     Linkedin = "xxxx"
-    Twitter = "xxxx"
+    Twitter = "tcpipeep"
     Keybase = "xxxx"
 
   # Home page config
@@ -75,7 +75,7 @@ theme = "FeelIt"
     [params.home.profile]
       enable = true
       # Profile Name
-      name = "Nicholas Karonji"
+      name = ""
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
