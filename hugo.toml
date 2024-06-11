@@ -1,4 +1,4 @@
-baseURL = "nicholas.karonji.org"
+baseURL = ""
 defaultContentLanguage = "en"
 # language code
 languageCode = "en"
@@ -13,7 +13,7 @@ theme = "FeelIt"
     pre = "<i class='fa-solid fa-user fa-fw'></i>"
     post = ""
     name = "About"
-    url = "/about"
+    url = "/about/"
     title = ""
     weight = 1
   [[menu.main]]
