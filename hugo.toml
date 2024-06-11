@@ -1,0 +1,197 @@
+baseURL = "nicholas.karonji.org"
+defaultContentLanguage = "en"
+# language code
+languageCode = "en"
+title = "Goodwillhacking"
+# Change the default theme to be use when building the site with Hugo
+theme = "FeelIt"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = "<i class='fa-solid fa-user fa-fw'></i>"
+    post = ""
+    name = "About"
+    url = "/about"
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = "<i class='fa-solid fa-file fa-fw'></i>"
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = "<i class='fa-solid fa-tag fa-fw'></i>"
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+    weight = 3
+
+  [[menu.main]]
+    identifier = "github"
+    pre = "<i class='fa-brands fa-github fa-fw'></i>"
+    post = ""
+    name = ""
+    url = "https://github.com/goodwillhacking/website"
+    title = "GitHub"
+    weight = 6
+
+[author]
+  name = "Goodwill Hacking"
+  link = ""
+
+[params]
+  # FeelIt theme version
+  version = "1.0.X"
+  # site default theme ("light", "dark", "auto")
+  defaultTheme = "auto"
+
+  [params.social]
+    GitHub = "xxxx"
+    Linkedin = "xxxx"
+    Twitter = "tcpipeep"
+    Keybase = "xxxx"
+
+  # Home page config
+  [params.home]
+    # amount of RSS pages
+    rss = 10
+
+    [params.home.profile]
+      enable = true
+      # Profile Name
+      name = ""
+      # Gravatar Email for preferred avatar in home page
+      gravatarEmail = ""
+      # URL of avatar shown in home page
+      avatarURL = ""
+      # title shown in home page (HTML format is supported)
+      title = ""
+      # subtitle shown in home page (HTML format is supported)
+      subtitle = "Un thème Hugo simple, élégant et efficace"
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
+      # disclaimer (HTML format is supported)
+      disclaimer = ""
+
+    [params.home.posts]
+      enable = true
+      # special amount of posts in each home posts page
+      paginate = 20
+      # display image-preview
+      imagePreview = true
+
+  # About page config
+  [params.about]
+    # whether to enable profile on about page
+    # depends on .Site.Params.home.profile.enable
+    enable = true
+    # whether to enable param layout
+    param = true
+    # title for param layout
+    paramTitle = "Attributes"
+    # general description of your site
+    # can be write with markdown style
+    description = "Technology enthusiast, pragmatic optimist."
+    # description of your status
+    [[params.about.status]]
+      faIcon = "fa-solid fa-building"
+      title = "Company"
+      desc = "FeelIt"
+    [[params.about.status]]
+      faIcon = "fa-solid fa-briefcase fa-fw"
+      title = "Occupation"
+      desc = "Freelancer"
+    [[params.about.status]]
+      title = "Location"
+      faIcon = "fa-solid fa-map-marker-alt"
+      desc = "Earth"
+    # description of your parameter
+    [[params.about.parameter]]
+      language = "UI/UX"
+      level = "80"
+    [[params.about.parameter]]
+      language = "HTML"
+      level = "70"
+    [[params.about.parameter]]
+      language = "Go"
+      level = "60"
+
+  [params.search]
+    enable = true
+    # type of search engine ("lunr", "algolia")
+    type = "algolia"
+    # max index length of the chunked content
+    contentLength = 4000
+    # placeholder of the search bar
+    placeholder = ""
+    # max number of results length
+    maxResultLength = 10
+    # snippet length of the result
+    snippetLength = 30
+    # HTML tag name of the highlight part in results
+    highlightTag = "em"
+    # whether to use the absolute URL based on the baseURL in search index
+    absoluteURL = false
+
+    [languages.en.params.search.algolia]
+      index = "index.en"
+      appID = "2VL5EWI1V4"
+      searchKey = "3e0af571b39369e23e9464692e529737"
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+  # Goldmark is from Hugo 0.60 the default library used for Markdown
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      # whether to use HTML tags directly in the document
+      unsafe = true
+  # Table Of Contents settings
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "MarkDown", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
