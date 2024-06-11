@@ -1,10 +1,27 @@
 ---
-spec:
-  name: GoodwillHacking
+alerts:
+  - rule: DEPLOYMENT_FAILED
+  - rule: DOMAIN_FAILED
+
+ingress:
+  rules:
+    - component:
+        name: website
+      cors:
+        allow_origins:
+          - prefix: https://nicholas.karonji.com
+      match:
+        path:
+          prefix: /
+
+name: GoodwillHacking
+region: nyc
+services:
   static_sites:
-    - build_command: hugo --destination ./public
+    - build_command: hugo --config hugo.toml --destination ./public
       environment_slug: hugo
-      git:
+      github:
         branch: main
-        repo: https://github.com/goodwillhacking/website.git
-      name: GoodwillHacking
+        deploy_on_push: true
+        repo: goodwillhacking/website
+      name: website
