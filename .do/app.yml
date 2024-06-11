@@ -1,9 +1,10 @@
 ---
-name: goodwillhacking
+name: GoodwillHacking
 static_sites:
-  - environment_slug: html
+  - build_command: hugo --destination ./public
+    environment_slug: hugo
     github:
       branch: main
       deploy_on_push: true
       repo: goodwillhacking/website
-    name: goodwillhacking
+    name: GoodwillHacking
