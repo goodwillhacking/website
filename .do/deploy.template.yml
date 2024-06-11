@@ -14,7 +14,7 @@ ingress:
         path:
           prefix: /
 
-name: GoodwillHacking
+name: goodwill-hacking
 region: nyc
 services:
   static_sites:
@@ -24,4 +24,4 @@ services:
         branch: dev
         deploy_on_push: true
         repo: goodwillhacking/website
-      name: website
+      name: goodwill-hacking
