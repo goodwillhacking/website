@@ -21,7 +21,7 @@ services:
     - build_command: hugo --config hugo.toml --destination ./public
       environment_slug: hugo
       github:
-        branch: main
+        branch: dev
         deploy_on_push: true
         repo: goodwillhacking/website
-      name: website
+      name: goodwillhacking
