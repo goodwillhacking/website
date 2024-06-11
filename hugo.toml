@@ -62,10 +62,10 @@ theme = "FeelIt"
   defaultTheme = "auto"
 
   [params.social]
-    GitHub = "xxxx"
+    GitHub = "goodwillhacking"
     Linkedin = "xxxx"
     Twitter = "tcpipeep"
-    Keybase = "xxxx"
+    Keybase = "goodwillhacking"
 
   # Home page config
   [params.home]
@@ -79,7 +79,7 @@ theme = "FeelIt"
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
-      avatarURL = ""
+      avatarURL = "https://s3.amazonaws.com/keybase_processed_uploads/ed0f8c2aabe66a75453b4f588b43b005_360_360.jpg"
       # title shown in home page (HTML format is supported)
       title = ""
       # subtitle shown in home page (HTML format is supported)
