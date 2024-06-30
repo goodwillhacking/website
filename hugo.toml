@@ -1,10 +1,19 @@
 baseURL = ""
+
+# determines default content language
 defaultContentLanguage = "en"
 # language code
 languageCode = "en"
+# website title
 title = "Goodwillhacking"
 # Change the default theme to be use when building the site with Hugo
 theme = "FeelIt"
+# whether to use robots.txt
+enableRobotsTXT = true
+# whether to use git commit log
+enableGitInfo = true
+# whether to use emoji code
+enableEmoji = true
 
 [menu]
   [[menu.main]]
@@ -60,18 +69,13 @@ theme = "FeelIt"
   version = "1.0.X"
   # site default theme ("light", "dark", "auto")
   defaultTheme = "auto"
-
-  [params.social]
-    GitHub = "goodwillhacking"
-    Linkedin = "xxxx"
-    Twitter = "tcpipeep"
-    Keybase = "goodwillhacking"
-
+  # public git repo url only then enableGitInfo is true
+  gitRepo = "https://github.com/goodwillhacking/website"
+  
   # Home page config
   [params.home]
     # amount of RSS pages
     rss = 10
-
     [params.home.profile]
       enable = true
       # Profile Name
@@ -90,14 +94,12 @@ theme = "FeelIt"
       social = true
       # disclaimer (HTML format is supported)
       disclaimer = ""
-
     [params.home.posts]
-      enable = true
+      enable = false
       # special amount of posts in each home posts page
-      paginate = 20
+      paginate = 8
       # display image-preview
       imagePreview = true
-
   # About page config
   [params.about]
     # whether to enable profile on about page
@@ -133,7 +135,41 @@ theme = "FeelIt"
     [[params.about.parameter]]
       language = "Go"
       level = "60"
+  # PWA config
+  [params.pwa]
+    # whether to enable PWA support
+    enable = true
+    # service-worker version
+    version = "0.2"
+  [params.social]
+    GitHub = "goodwillhacking"
+    Linkedin = "xxxx"
+    Twitter = "tcpipeep"
+    Keybase = "goodwillhacking"
+  # Site verification code for Google/Bing/Yandex/Pinterest/Baidu
+  [params.verification]
+    google = ""
+    # google-site-verification=e2vEQKaV2QKz2WrsFqdZVIynFoRIZyvFAEb9hDWeg1k
+    bing = ""
+    yandex = ""
+    pinterest = ""
+    baidu = ""
+  # Site SEO config
+  [params.seo]
+    # image URL
+    image = "/images/Apple-Devices-Preview.webp"
+    # thumbnail URL
+    thumbnailUrl = "/images/screenshot.png"
 
+  # Analytics config
+  [params.analytics]
+    enable = false
+    # GoatCounter Analytics
+    [params.analytics.goatcounter]
+      # GoatCounter code
+      code = "goodwillhacking"
+# <script data-goatcounter="https://goodwillhacking.goatcounter.com/count"
+#         async src="//gc.zgo.at/count.js"></script>
   [params.search]
     enable = true
     # type of search engine ("lunr", "algolia")
@@ -155,6 +191,93 @@ theme = "FeelIt"
       index = "index.en"
       appID = "2VL5EWI1V4"
       searchKey = "3e0af571b39369e23e9464692e529737"
+
+  # Page config
+  [params.page]
+    # whether to hide a page from home page
+    hiddenFromHomePage = false
+    # whether to hide a page from search results
+    hiddenFromSearch = false
+    # whether to enable lightgallery
+    lightgallery = false
+    # whether to enable the ruby extended syntax
+    ruby = true
+    # whether to enable the fraction extended syntax
+    fraction = true
+    # whether to enable the fontawesome extended syntax
+    fontawesome = true
+    # whether to use the fontawesome as cdn source
+    cdnfontawesome = true
+    # whether to show link to Raw Markdown content of the content
+    linkToMarkdown = true
+    # whether to show link to improve the article
+    improveArticle = "https://github.com/khusika/FeelIt/edit/main/exampleSite/content/"
+    # whether to show the full text content in RSS
+    rssFullText = false
+    # Table of the contents config
+    [params.page.toc]
+      # whether to enable the table of the contents
+      enable = true
+      # whether to keep the static table of the contents in front of the post
+      keepStatic = false
+      # whether to make the table of the contents in the sidebar automatically collapsed
+      auto = true
+    # Code config
+    [params.page.code]
+      # whether to show the copy button of the code block
+      copy = true
+      # the maximum number of lines of displayed code by default
+      maxShownLines = 10
+    # KaTeX mathematical formulas config (KaTeX https://katex.org/)
+    [params.page.math]
+      enable = false
+      # default block delimiter is $$ ... $$ and \\[ ... \\]
+      blockLeftDelimiter = ""
+      blockRightDelimiter = ""
+      # default inline delimiter is $ ... $ and \\( ... \\)
+      inlineLeftDelimiter = ""
+      inlineRightDelimiter = ""
+      # KaTeX extension copy_tex
+      copyTex = true
+      # KaTeX extension mhchem
+      mhchem = true
+    # Mapbox GL JS config (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
+    [params.page.mapbox]
+      # access token of Mapbox GL JS
+      accessToken = "pk.eyJ1IjoiZ29vZHdpbGxoYWNraW5nIiwiYSI6ImNseGhpcHN5dTE5eTMyaW92NjBvMXh6a2QifQ.S4Jr0s_I0Pq8mTkeaqhy2A"
+      # style for the light theme
+      lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
+      # style for the dark theme
+      darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true"
+      # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
+      navigation = true
+      # whether to add GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
+      geolocate = true
+      # whether to add ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
+      scale = true
+      # whether to add FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
+      fullscreen = true
+    # Social share links in post page
+    [params.page.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      Linkedin = false
+      HackerNews = true
+      Reddit = false
+      RSS = true
+    # Comment config
+    [params.page.comment]
+      enable = true
+      [params.page.comment.vssue]
+        # https://vssue.js.org/guide/github.html#config-and-start-your-vssue
+        enable = true
+        # Vssue platform API ("bitbucket", "gitea", "gitee", "github", "github-v4", "gitlab")
+        platform = "github"
+        owner = "goodwillhacking"
+        repo = "website"
+        clientId = "Ov23lioMBEjBKBPu6U6g"
+        clientSecret = ""
 
 # Markup related configuration in Hugo
 [markup]
@@ -183,6 +306,10 @@ theme = "FeelIt"
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 6
+
+# Permalinks config (https://gohugo.io/content-management/urls/#permalinks)
+[Permalinks]
+  posts = ":filename"
 
 [sitemap]
   changefreq = "weekly"

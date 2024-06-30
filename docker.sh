@@ -20,6 +20,7 @@ fi
 docker pull nginx:latest
 
 # Build 
+# https://gohugo.io/getting-started/configuration/
 hugo --config hugo.toml
 
 # Run the container with desired options

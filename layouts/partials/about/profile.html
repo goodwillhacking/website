@@ -20,15 +20,6 @@
         </div>
     {{- end -}}
 
-        <h2>
-            {{- $profile.name -}}
-        </h2>
-
-    {{- with $profile.subtitle -}}
-        <div class="subtitle">
-            {{- . | safeHTML -}}
-        </div>
-    {{- end -}}
 
     {{- if $profile.social -}}
         <div class="links">

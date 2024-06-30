@@ -1,0 +1,3 @@
+# === partials/footer.html ===
+[poweredBySome]
+other = "Powered by {{ .Hugo }} the {{ .Theme }} theme"
